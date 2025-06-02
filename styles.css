@@ -1,0 +1,270 @@
+/* General Body Styling */
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: red; /* Red navbar background */
+  padding: 15px 30px; /* Add padding for better spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* Ensure logo image is not distorted */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.nav-item {
+  margin: 0 15px; /* Space between items */
+}
+
+.nav-link {
+  color: white; /* White text */
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: black;
+  color: red;
+}
+
+.navbar-toggler {
+  background-color: white;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: black; /* Change hamburger icon color */
+}
+
+/* Active Navbar Item */
+.nav-item.active .nav-link {
+  background-color: rgb(42, 39, 39);
+  color: red;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Vertical space between items */
+  }
+
+  .navbar-toggler {
+    background-color: black;
+  }
+
+  .navbar-toggler-icon {
+    background-color: white; /* Toggler icon */
+  }
+}
+
+/* Ensure the navbar stays at the top when scrolling */
+.navbar.scrolled {
+  background-color: #111111; /* Dark red when scrolled */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* More subtle shadow */
+}
+
+/* Smooth transition for the background color */
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+/* Chatbot Icon */
+#chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #ff002f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 26px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+  z-index: 1400;
+}
+
+#chatbot-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Chatbot Widget */
+#chatbot-widget {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1400;
+}
+
+/* Chatbot Header */
+#chatbot-header {
+  background: #3300ff;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#close-chatbot {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Chatbot Body */
+#chatbot-body {
+  padding: 10px;
+  max-height: 350px; /* Prevents hiding the top part */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #f8f9fa;
+}
+
+/* Chatbot Messages */
+.chatbot-message {
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.5s forwards;
+}
+
+.chatbot-user-message {
+  background: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+.chatbot-bot-message {
+  background: #e9ecef;
+  color: black;
+  align-self: flex-start;
+}
+
+/* Chatbot Options */
+.chatbot-option {
+  padding: 8px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.chatbot-option:hover {
+  background: #ff0000;
+  color: white;
+}
+
+/* Chatbot Input */
+#chatbot-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  background: white;
+}
+
+#chatbot-user-input {
+  width: 75%;
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+
+/*products */
+.product-card {
+  margin-bottom: 30px;
+}
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.product-price {
+  font-size: 1.1rem;
+  color: #28a745;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+.discount-badge {
+  background-color: #ff5733;
+  color: white;
+  padding: 3px 10px;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.product-category {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.product-image {
+  height: 200px;
+  object-fit: cover;
+}
+.availability-badge {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.available {
+  background-color: #28a745;
+  color: white;
+}
+.out-of-stock {
+  background-color: #dc3545;
+  color: white;
+}

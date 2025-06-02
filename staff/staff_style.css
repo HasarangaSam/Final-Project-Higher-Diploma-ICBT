@@ -1,0 +1,174 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f5f9;
+  color: #333;
+}
+
+/* Wrapper for Sidebar & Content */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1f2b37; /* Darker shade for staff sidebar */
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  padding-top: 15px;
+}
+
+.sidebar h4 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar .nav {
+  padding-left: 0;
+}
+
+.sidebar .nav li {
+  list-style: none;
+}
+
+.sidebar .nav-link {
+  display: block;
+  color: #c5c6c7; /* Lighter gray text */
+  padding: 12px 20px;
+  font-size: 14px;
+  transition: background 0.3s, padding-left 0.3s;
+  text-decoration: none;
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background-color: #5a6268; /* Lighter shade for hover */
+  color: white;
+  padding-left: 25px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 30px;
+}
+
+h1, h3 {
+  color: #343a40; /* Darker color for headings */
+}
+
+.container {
+  max-width: 95%;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #17a2b8; /* Teal for table header */
+  color: white;
+}
+
+table td {
+  background-color: #f8f9fa;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #28a745; /* Green for buttons */
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+.btn-warning {
+  background-color: #ffc107; /* Yellow for warning */
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Red for danger */
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .sidebar {
+      width: 220px;
+  }
+
+  .main-content {
+      margin-left: 220px;
+      width: calc(100% - 220px);
+  }
+
+  .sidebar .nav-link {
+      font-size: 13px;
+      padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+  }
+
+  .main-content {
+      margin-left: 200px;
+      width: calc(100% - 200px);
+      padding: 20px;
+  }
+
+  table th, table td {
+      font-size: 12px;
+      padding: 10px;
+  }
+}
